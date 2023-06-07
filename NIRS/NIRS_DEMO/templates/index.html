@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Quality Prediction</title>
+</head>
+<body>
+    <h1>Air Quality Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="nox">NOx(GT):</label>
+        <input type="text" id="nox" name="nox"><br><br>
+
+        <label for="no2">NO2(GT):</label>
+        <input type="text" id="no2" name="no2"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
